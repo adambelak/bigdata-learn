@@ -35,7 +35,7 @@ $ hadoop fs -put cite75_99.txt /tmp/learn/mapreduce/patent/input
 ```
 7. run the MapReduce program
 ```bash
-$ yarn -jar patent-java.jar /tmp/learn/mapreduce/patent/input /tmp/learn/mapreduce/patent/java-output  
+$ yarn jar patent-java.jar /tmp/learn/mapreduce/patent/input /tmp/learn/mapreduce/patent/java-output  
 ```
 The program doesn't run if your output directory exists. Choose a non-existing folder or remove the `java-output` folder
 ```bash
