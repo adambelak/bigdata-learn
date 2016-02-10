@@ -11,7 +11,6 @@ public class PatentCitationMapper extends Mapper<Text, Text, Text, Text> {
         String[] citation = key.toString().split(",");
         Text cited = new Text(citation[0]);
         Text citing = new Text(citation[1]);
-
         context.write(cited, citing);
     }
 }
