@@ -16,9 +16,9 @@ $ su -l hdfs
 $ git clone git@github.com:adambelak/bigdata-learn.git
 $ cd bigdata-learn
 $ mkdir target
-$ cp mapreduce/patent-python/*.py target/ 
+$ cp mapreduce/patent-python/src/main/python/*.py target/ 
 ```
-The python project contains only two python scripts: `mapper.py` and `reducer.py`.
+The python folder contains only two python scripts: `mapper.py` and `reducer.py`.
 4. Enter the `target` folder and download [acite75_99.zip](http://nber.org/patents/acite75_99.zip) file
 ```bash
 $ cd target
