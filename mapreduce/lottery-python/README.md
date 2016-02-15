@@ -22,7 +22,7 @@ $ cp mapreduce/lottery-python/reducer/*.py target/reducer
 4. Enter the target folder and copy the lottery.csv into the folder 
 ```bash
 $ cd target
-$ cp ../mapreduce/lottery-python/lottery.csv target/
+$ cp ../mapreduce/lottery-python/lottery.csv ./
 ```
 5. Create HDFS working directory and upload the unzipped file
 ```bash
