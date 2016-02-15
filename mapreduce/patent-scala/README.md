@@ -13,7 +13,7 @@ $ su -l hdfs
 ```
 3. clone this repository and build the project
 ```bash
-$ git clone git@github.com:adambelak/bigdata-learn.git
+$ git clone https://github.com/adambelak/bigdata-learn.git
 $ cd bigdata-learn
 $ mvn clean package
 $ mkdir target

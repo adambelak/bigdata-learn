@@ -12,7 +12,7 @@ $ su -l hdfs
 ```
 3. Clone this repository and copy the source files to the target folder
 ```bash
-$ git clone git@github.com:adambelak/bigdata-learn.git
+$ git clone https://github.com/adambelak/bigdata-learn.git
 $ cd bigdata-learn
 $ mkdir -p target/mapper
 $ mkdir -p target/reducer
