@@ -5,21 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.epam.bigdata</groupId>
-        <artifactId>bigdata</artifactId>
+        <groupId>com.epam.bigdata.mapreduce</groupId>
+        <artifactId>mapreduce</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.epam.bigdata.mapreduce</groupId>
-    <artifactId>mapreduce</artifactId>
+    <artifactId>patent-python</artifactId>
     <packaging>pom</packaging>
-
-    <modules>
-        <module>patent-java</module>
-        <module>lottery-java</module>
-        <module>patent-python</module>
-        <module>patent-scala</module>
-        <module>lottery-python</module>
-    </modules>
 
 </project>
