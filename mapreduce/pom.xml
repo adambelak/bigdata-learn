@@ -18,6 +18,7 @@
         <module>patent-java</module>
         <module>patent-python</module>
         <module>patent-scala</module>
+        <module>lottery-python</module>
     </modules>
 
 </project>
