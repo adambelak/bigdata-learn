@@ -10,15 +10,17 @@ $ ssh root@127.0.0.1 -p 2222
 2. Login as `hdfs` on your Sandbox
 ```bash
 $ su -l hdfs
+$ cd ~
 ```
 3. Clone this repository and copy the source files to the target folder
 ```bash
 $ git clone git@github.com:adambelak/bigdata-learn.git
 $ cd bigdata-learn
-$ mkdir target
-$ cp mapreduce/patent-python/src/main/python/*.py target/ 
+$ mkdir -p target/mapper
+$ mkdir -p target/reducer
+$ cp mapreduce/patent-python/mapper/*.py target/
+$ cp mapreduce/patent-python/reducer/*.py target/
 ```
-The python folder contains only two python scripts: `mapper.py` and `reducer.py`.
 4. Enter the `target` folder and download [acite75_99.zip](http://nber.org/patents/acite75_99.zip) file
 ```bash
 $ cd target
@@ -38,7 +40,7 @@ Check the `HADOOP_HOME` variable:
 ```bash
 $ echo $HADOOP_HOME
 ```
-If the result is an empty line, set up the HADOOP_HOME variable for the current user. First find the hadoop-streaming.jar file.
+If the result is an empty line, set up the HADOOP_HOME variable for the current user. First find the `hadoop-streaming.jar` file.
 ```bash
 $ find / -name hadoop-streaming.jar
 ```
@@ -56,9 +58,10 @@ $ source ~/.bashrc
 ```bash
 $ yarn jar $HADOOP_HOME/hadoop-mapreduce/hadoop-streaming.jar \
 $ -input /tmp/learn/mapreduce/patent/input/ -output /tmp/learn/mapreduce/patent/python-output \ 
-$ -file /home/hdfs/mapreduce-examples/patents/mapper.py -mapper 'python mapper.py' \ 
-$ -file /home/hdfs/mapreduce-examples/patents/reducer.py -reducer 'python reducer.py'  
+$ -file $PWD/mapper/mapper.py -mapper 'python mapper.py' \ 
+$ -file $PWD/reducer/reducer.py -reducer 'python reducer.py'  
 ```
+The $PWD is a system variable which contains your current working directory.
 The program doesn't run if your output directory exists. Choose a non-existing folder or remove the `python-output` folder
 ```bash
 $ hadoop fs -rm -R /tmp/learn/mapreduce/patent/python-output
