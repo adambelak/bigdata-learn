@@ -39,7 +39,7 @@ $ yarn jar patent-scala.jar /tmp/learn/mapreduce/patent/input /tmp/learn/mapredu
 ```
 The program doesn't run if your output directory exists. Choose a non-existing folder or remove the `scala-output` folder
 ```bash
-$ hadoop fs -rmdir /tmp/learn/mapreduce/patent/scala-output
+$ hadoop fs -rm -R /tmp/learn/mapreduce/patent/scala-output
 ```
 8. if you want, you can check the status of your MapReduce program 
 http://127.0.0.1:8088/cluster

@@ -61,7 +61,7 @@ $ -file /home/hdfs/mapreduce-examples/patents/reducer.py -reducer 'python reduce
 ```
 The program doesn't run if your output directory exists. Choose a non-existing folder or remove the `python-output` folder
 ```bash
-$ hadoop fs -rmdir /tmp/learn/mapreduce/patent/python-output
+$ hadoop fs -rm -R /tmp/learn/mapreduce/patent/python-output
 ```
 9. If you want, you can check the status of your MapReduce program 
 http://127.0.0.1:8088/cluster
