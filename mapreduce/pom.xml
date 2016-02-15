@@ -16,6 +16,7 @@
 
     <modules>
         <module>patent-java</module>
+        <module>lottery-java</module>
     </modules>
 
 </project>
